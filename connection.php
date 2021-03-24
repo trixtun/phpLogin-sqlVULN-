@@ -1,11 +1,8 @@
 
 <?php
-   $host = "localhost";  
-   $user = "root";  
-   $password = '';  
-   $db_name = "18bce0203_db";  
+
      
-   $con = mysqli_connect($host, $user, $password, $db_name);  
+   $con = mysqli_connect("localhost", "root", '','18bce0203_db');  
    if(mysqli_connect_errno()) {  
        die("Failed to connect with MySQL: ". mysqli_connect_error());  
    } 
