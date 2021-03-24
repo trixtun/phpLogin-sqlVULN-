@@ -19,12 +19,12 @@ while($row = mysqli_fetch_array($select_user_query))
 
 
 
-if($username !== $db_user && $password !== $db_pass)
+if($_POST['user']!== $db_user && $_POST['pass'] !== $db_pass)
 {
     header("Location: ../sqltest/fail.php");
 
 }
-else if($username == $db_user && $password == $db_pass)
+else if($_POST['user'] == $db_user && $_POST['pass'] == $db_pass)
 {
     header("Location:../sqltest/success.php");
 }
