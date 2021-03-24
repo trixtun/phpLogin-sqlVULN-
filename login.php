@@ -5,10 +5,8 @@
 
 if(isset($_POST['login']))
 {
-   $username = $_POST['user'];
-   $password = $_POST['pass'];
-
-   $query = "SELECT * FROM passkeys WHERE users = '{$username}' and passkey = '{$password}' ";
+ 
+   $query = "SELECT * FROM passkeys WHERE users = '{$_POST['user']}' and passkey = '{$_POST['pass']}' ";
 
    $select_user_query = mysqli_query($con, $query);
 }
